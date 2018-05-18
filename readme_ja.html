@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>どんなデータもAzure IoT Hubに転送！IoTデバイスで汎用的に利用できるサンプルコード紹介</title>
+</head>
+<body>
+<h2>どんなデータもAzure IoT Hubに転送！IoTデバイスで汎用的に利用できるサンプルコード紹介</h2>
+<p align="right">株式会社デバイスドライバーズ所属 日高亜友 提供</p>
+<p><a href="https://www.microsoft.com/ja-jp/events/decode/2018/sessions.aspx#DA61" target="_blank">de:code 2018 シアターセッション</a> 紹介のサンプルツール。最新版は<a href="https://github.com/ahidaka/iot-edge-hacks/" target="_blank">https://github.com/ahidaka/iot-edge-hacks/</a>から入手可能。</p>
+<h3>解決する課題</h3>
+IoTデバイスからMicrosoft Azure IoT Hubへの接続は、MQTT等のセキュアなプロトコル対応が必要など面倒であった。
+IoT Hub接続用ライブラリとしてDevice SDKやIoT Edgeがあるが、複数の任意デバイスですぐに利用できるサンプルまでは用意されていない。
+ここで提供する「iot-edge-hacks」は、ゲートウェイデバイスが何らかの方法で入手したセンサー値を、とにかくセキュアにIoT Hubに送ることを目的としている。
+IoTデバイスのデータをIoT Hubに転送して確認するプロトタイプとして利用できるほか、リアルタイム処理が重要ではないセンサーデータの送信にそのまま利用できる。
+<h3>構成とヒント</h3>
+<p>Azure IoT Edge V1の<a href="https://github.com/Azure/iot-edge/tree/master/v1/samples/simulated_device_cloud_upload" target="_blank">Simulated device-to-cloud sample</a>
+を改造して、実データをIoT Hubに送る様にしている。
+IoTデバイスとのデータ受け渡しに「ブリッジファイル」と呼ぶ数値入りテキストファイルを使用する。
+デバイスデータ受信時に特定のテキストファイルにデータ値を書き出すだけで良いため、汎用的に利用可能。
+ファイル名や送信間隔の設定は JSON ファイルで指定して、複数のデータポイントを定義できる。
+Simulated device-to-cloud sample の差分で提供のため、Windows、各種 Linux、WSL 環境で動作可能。</p>
+<h3>前提条件</h3>
+Azure IoT Edge V1の Simulated device-to-cloud sample をベースにして開発したため、 動作対象環境では、すでに Azure
+IoT Edge V1 がビルドできて正常動作していることが重要な前提条件。 Ubuntu系の一部の Linux、Windows でのインストールツールの問題により正常にビルドできない環境があるので注意が必要。
+<h3>利用方法</h3>
+<ol>
+  <li>Simulated device-to-cloud sampleのビルドと動作確認
+  <p><a href="https://github.com/Azure/iot-edge/blob/master/v1/samples/simulated_device_cloud_upload/README.md" target="_blank">READMEの手順</a>に従ってSimulated device-to-cloud sampleをビルドし、Device Explore等でシミュレーションの温度値などが送信されていることを確認。
+  </p>
+  <li>ファイルの入れ替えとビルド
+  <p>次のファイルを入れ替えた後でビルドし直す。</p>
+    <ul>
+    <li>iot-edge/modules/simulated_device/src/simulated_device.c
+    <li>iot-edge/samples/simulated_device_cloud_upload/src/以下の<strong>JSON</strong>ファイル
+    </ul>
+  <p>&nbsp;</p>
+  <li>ファイルの設定
+  <p>Simulated device-to-cloud sampleと同様に、"IoTHubName", "IoTHubSuffix", "deviceId", "deviceKey"を設定後、対応するデバイスの"filename", "messagePeriod" を記述する。</p>
+  <p>&quot;filename&quot;はセンサー値を持つファイルの絶対パス名、&quot;messagePeriod&quot; はミリ秒単位での読み取り周期を記述。</p>
+  <li>起動
+  <p>Simulated device-to-cloud sampleと同じ手順で json ファイルを指定して起動。</p>
+  <li>テスト
+  <p>Device Explorer等でモニターしながら、エディタでファイル内の数値を修正して動作検証。</p>
+</ol>
+<h3>ライセンス</h3>
+Azure IoT Edge V1を継承して<a href="https://github.com/Azure/iot-edge/blob/master/v1/License.txt" target="_blank">MITライセンス</a> を適用。
+<h3>問い合わせ先</h3>
+<p>株式会社デバイスドライバーズ E-Kit事業部 e-kit@decdrv.co.jp 宛にメールで問い合わせ。</p>
+</body>
+</html>
