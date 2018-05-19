@@ -1,6 +1,6 @@
 # iot-edge-hacks
 
-## [ de:code 2018 シアターセッション DA61](readme_ja.html)
+## [ de:code 2018 シアターセッション DA61](https://www.microsoft.com/ja-jp/events/decode/2018/sessions.aspx#DA61)
 
 ### どんなデータもAzure IoT Hubに転送！IoTデバイスで汎用的に利用できるサンプルコード紹介 の日本語解説
 
