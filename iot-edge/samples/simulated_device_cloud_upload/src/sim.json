@@ -1,0 +1,1008 @@
+{
+  "modules": [
+    {
+      "name": "IotHub",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/iothub/libiothub.so"
+        }
+      },
+      "args": {
+        "IoTHubName": "DDIoTHub",
+        "IoTHubSuffix": "azure-devices.net",
+        "Transport": "HTTP",
+        "RetryPolicy": "EXPONENTIAL_BACKOFF_WITH_JITTER"
+      }
+    },
+    {
+      "name": "mapping",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/identitymap/libidentity_map.so"
+        }
+      },
+      "args": [
+        {
+          "macAddress": "00:00:00:00:00:05",
+          "deviceId": "devdrv.RBI1",
+          "deviceKey": "a8emJZ2dMgbGmUJ5ep7iIFfOZjbHat6xHXPwuXvq02g="
+        },
+        {
+          "macAddress": "00:00:00:00:00:29",
+          "deviceId": "devdrv.CH1",
+          "deviceKey": "dMTLerW1ySZBuVZOs+vqCGTZrcRdoAVWslGW5WyjQBk="
+        },
+        {
+          "macAddress": "00:00:00:00:00:25",
+          "deviceId": "devdrv.RB01",
+          "deviceKey": "kV/Nu0mW5VFL6E1FqDLSNHznNYHDtOhrcmmH0YqoOkI="
+        },
+        {
+          "macAddress": "00:00:00:00:00:08",
+          "deviceId": "devdrv.TMP1",
+          "deviceKey": "slcKxLQ7pjY9AcdFCFodRul+cClhNOiXQoTmEMfZoaA="
+        },
+        {
+          "macAddress": "00:00:00:00:00:30",
+          "deviceId": "devdrv.RAI",
+          "deviceKey": "EPbXSsG/QGRiRV7KHrg26e0cUlFWNSktXc7gUyT3W9A="
+        },
+        {
+          "macAddress": "00:00:00:00:00:28",
+          "deviceId": "devdrv.TMP2",
+          "deviceKey": "8GtmT0WbLE77PnHgg0h2Ikd45yq+LF0b1Pr6QIxdfus="
+        },
+        {
+          "macAddress": "00:00:00:00:00:16",
+          "deviceId": "devdrv.CH2",
+          "deviceKey": "dHUGqpdwjMnrShWNjhjzgzjx+GxEUxp5/FvUxUoQHZg="
+        },
+        {
+          "macAddress": "00:00:00:00:00:07",
+          "deviceId": "devdrv.HUM",
+          "deviceKey": "wHZYuhNoQhVKf5CPwKi9Ad8Y0fyvck7zTyeT6F36pEk="
+        },
+        {
+          "macAddress": "00:00:00:00:00:32",
+          "deviceId": "devdrv.BC",
+          "deviceKey": "Pjg4giUHEN1/bMDbkfC5eZoFlQW/MIhl/KDT9wFaW98="
+        },
+        {
+          "macAddress": "00:00:00:00:00:31",
+          "deviceId": "devdrv.TSN1",
+          "deviceKey": "krHCPRswqIFQTK2/9Tjxs1q/C59NvgXq2rV8qKmIBAw="
+        },
+        {
+          "macAddress": "00:00:00:00:00:21",
+          "deviceId": "devdrv.CO",
+          "deviceKey": "86/FBSHvtvTR2Uf7ypdRy3Dxqq0jQEPYeQLBFxbnxXI="
+        },
+        {
+          "macAddress": "00:00:00:00:00:20",
+          "deviceId": "devdrv.RA0",
+          "deviceKey": "MM/d4rLNeWS0KUNzWI8E7NifIA5tV+YOnFCMhYGbekU="
+        },
+        {
+          "macAddress": "00:00:00:00:00:17",
+          "deviceId": "devdrv.TMP3",
+          "deviceKey": "kfykLp0+O7dEh1y7hx6xtyRxDkCq0owVaSVmMR98t2c="
+        },
+        {
+          "macAddress": "00:00:00:00:00:03",
+          "deviceId": "devdrv.RBI",
+          "deviceKey": "kLdkR5Zwh/T0sIKHE6mw/TyPPkSX9egddhR6UsAd1j0="
+        },
+        {
+          "macAddress": "00:00:00:00:00:26",
+          "deviceId": "devdrv.TMP4",
+          "deviceKey": "axDa65JFI7F42kQ7hVBppnCI3ouD7P/Ktr5hF/Rioog="
+        },
+        {
+          "macAddress": "00:00:00:00:00:23",
+          "deviceId": "devdrv.BC1",
+          "deviceKey": "G8pksOv6QBSwTZzbU2M53URFM6Zsg2jF+u0zAtzqfYQ="
+        },
+        {
+          "macAddress": "00:00:00:00:00:19",
+          "deviceId": "devdrv.RB0",
+          "deviceKey": "Fd/wPKGLDIC/dV4k1s/9OVRmsbh7E91ZutJlyIEZ2pQ="
+        },
+        {
+          "macAddress": "00:00:00:00:00:13",
+          "deviceId": "devdrv.TSN2",
+          "deviceKey": "cMFZzYLtxM+crgd4AemC973aR6WLBZl3ILgVjir0u+k="
+        },
+        {
+          "macAddress": "00:00:00:00:00:24",
+          "deviceId": "devdrv.DIV",
+          "deviceKey": "pI/aT+GiDAZJx28XOnpOvjov6kg/YHGZDsKik5Q20EU="
+        },
+        {
+          "macAddress": "00:00:00:00:00:14",
+          "deviceId": "devdrv.TMP",
+          "deviceKey": "MugaKvtzuUcXI22QJe38EXyCw96ymnkfWebfuWtYMYU="
+        },
+        {
+          "macAddress": "00:00:00:00:00:09",
+          "deviceId": "devdrv.PIRS",
+          "deviceKey": "2hT7WjRRND6mebmYbVgnNGstzy41rlnBcsq4ch+bw80="
+        },
+        {
+          "macAddress": "00:00:00:00:00:27",
+          "deviceId": "devdrv.HUM1",
+          "deviceKey": "IA1a+GJf+ImKBU2jnr+thmkK2FBwxDrdv8AJCTama+s="
+        },
+        {
+          "macAddress": "00:00:00:00:00:33",
+          "deviceId": "devdrv.HUM2",
+          "deviceKey": "cmUt4yVPd4S3aTttrIA8LP2ADGxTsWmBMr+z5pBx7Y8="
+        },
+        {
+          "macAddress": "00:00:00:00:00:11",
+          "deviceId": "devdrv.EBO1",
+          "deviceKey": "bDVkiofyoxmL0/EJ1qiTw/Kya0zhBoz6lM3oWNqMtzA="
+        },
+        {
+          "macAddress": "00:00:00:00:00:10",
+          "deviceId": "devdrv.SVA",
+          "deviceKey": "uQ4nAtiqlnV6o5kROpcQS18NQspAeHP1Z2omPVGcPEQ="
+        },
+        {
+          "macAddress": "00:00:00:00:00:01",
+          "deviceId": "devdrv.PF",
+          "deviceKey": "AgzlYYfGF+RnHkTD11qOQzPCWGBJRj8h/Iv5wVIErvI="
+        },
+        {
+          "macAddress": "00:00:00:00:00:18",
+          "deviceId": "devdrv.CO1",
+          "deviceKey": "5sisBkQDx/PaeFt12AShStBbJGyGTEfPzPP62MZHg5w="
+        },
+        {
+          "macAddress": "00:00:00:00:00:12",
+          "deviceId": "devdrv.RAI1",
+          "deviceKey": "o5XANJ+aMUc3lQyzRCmwac2sgaqqdMyfxUFeK1XVODQ="
+        },
+        {
+          "macAddress": "00:00:00:00:00:34",
+          "deviceId": "devdrv.TSN",
+          "deviceKey": "Tu52+zv289BWcDlMxgMNm055BRC8u+vmUG9Wft3C6H8="
+        },
+        {
+          "macAddress": "00:00:00:00:00:22",
+          "deviceId": "devdrv.CH",
+          "deviceKey": "0U58UR+4g/NXrFSxprTcvgMjuBk6cL0Crg4U15wBj04="
+        },
+        {
+          "macAddress": "00:00:00:00:00:15",
+          "deviceId": "devdrv.RA01",
+          "deviceKey": "Icv4FLBH9AMMQhdKmi2NCUddg43NzXx2EaSYPX3b39A="
+        },
+        {
+          "macAddress": "00:00:00:00:00:06",
+          "deviceId": "devdrv.ES",
+          "deviceKey": "X3O96uceRc/aY37yJXoV7wcqfP/uhTD+grLhTrQ04Mc="
+        },
+        {
+          "macAddress": "00:00:00:00:00:04",
+          "deviceId": "devdrv.EBO",
+          "deviceKey": "ruQ6aqBoIPioK5OMHP6LVQOMDx3prbxnltJcyef+bzg="
+        },
+        {
+          "macAddress": "00:00:00:00:00:02",
+          "deviceId": "devdrv.SVC",
+          "deviceKey": "XmWnXCzy8EiXKWlvB7f4ZDL5hSjNn/Odoo6DcZwp3Es="
+        }
+      ]
+    },
+    {
+      "name": "RBI1",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:05",
+        "filename": "/var/tmp/dpride/RBI1",
+        "dataUnit": "u",
+        "messagePeriod": 1847
+      }
+    },
+    {
+      "name": "CH1",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:29",
+        "filename": "/var/tmp/dpride/CH1",
+        "dataUnit": "u",
+        "messagePeriod": 2027
+      }
+    },
+    {
+      "name": "RB01",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:25",
+        "filename": "/var/tmp/dpride/RB01",
+        "dataUnit": "u",
+        "messagePeriod": 1999
+      }
+    },
+    {
+      "name": "TMP1",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:08",
+        "filename": "/var/tmp/dpride/TMP1",
+        "dataUnit": "u",
+        "messagePeriod": 1871
+      }
+    },
+    {
+      "name": "RAI",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:30",
+        "filename": "/var/tmp/dpride/RAI",
+        "dataUnit": "u",
+        "messagePeriod": 2029
+      }
+    },
+    {
+      "name": "TMP2",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:28",
+        "filename": "/var/tmp/dpride/TMP2",
+        "dataUnit": "u",
+        "messagePeriod": 2017
+      }
+    },
+    {
+      "name": "CH2",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:16",
+        "filename": "/var/tmp/dpride/CH2",
+        "dataUnit": "u",
+        "messagePeriod": 1931
+      }
+    },
+    {
+      "name": "HUM",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:07",
+        "filename": "/var/tmp/dpride/HUM",
+        "dataUnit": "u",
+        "messagePeriod": 1867
+      }
+    },
+    {
+      "name": "BC",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:32",
+        "filename": "/var/tmp/dpride/BC",
+        "dataUnit": "u",
+        "messagePeriod": 2053
+      }
+    },
+    {
+      "name": "TSN1",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:31",
+        "filename": "/var/tmp/dpride/TSN1",
+        "dataUnit": "u",
+        "messagePeriod": 2039
+      }
+    },
+    {
+      "name": "CO",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:21",
+        "filename": "/var/tmp/dpride/CO",
+        "dataUnit": "u",
+        "messagePeriod": 1979
+      }
+    },
+    {
+      "name": "RA0",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:20",
+        "filename": "/var/tmp/dpride/RA0",
+        "dataUnit": "u",
+        "messagePeriod": 1973
+      }
+    },
+    {
+      "name": "TMP3",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:17",
+        "filename": "/var/tmp/dpride/TMP3",
+        "dataUnit": "u",
+        "messagePeriod": 1933
+      }
+    },
+    {
+      "name": "RBI",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:03",
+        "filename": "/var/tmp/dpride/RBI",
+        "dataUnit": "u",
+        "messagePeriod": 1823
+      }
+    },
+    {
+      "name": "TMP4",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:26",
+        "filename": "/var/tmp/dpride/TMP4",
+        "dataUnit": "u",
+        "messagePeriod": 2003
+      }
+    },
+    {
+      "name": "BC1",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:23",
+        "filename": "/var/tmp/dpride/BC1",
+        "dataUnit": "u",
+        "messagePeriod": 1993
+      }
+    },
+    {
+      "name": "RB0",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:19",
+        "filename": "/var/tmp/dpride/RB0",
+        "dataUnit": "u",
+        "messagePeriod": 1951
+      }
+    },
+    {
+      "name": "TSN2",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:13",
+        "filename": "/var/tmp/dpride/TSN2",
+        "dataUnit": "u",
+        "messagePeriod": 1901
+      }
+    },
+    {
+      "name": "DIV",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:24",
+        "filename": "/var/tmp/dpride/DIV",
+        "dataUnit": "u",
+        "messagePeriod": 1997
+      }
+    },
+    {
+      "name": "TMP",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:14",
+        "filename": "/var/tmp/dpride/TMP",
+        "dataUnit": "u",
+        "messagePeriod": 1907
+      }
+    },
+    {
+      "name": "PIRS",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:09",
+        "filename": "/var/tmp/dpride/PIRS",
+        "dataUnit": "u",
+        "messagePeriod": 1873
+      }
+    },
+    {
+      "name": "HUM1",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:27",
+        "filename": "/var/tmp/dpride/HUM1",
+        "dataUnit": "u",
+        "messagePeriod": 2011
+      }
+    },
+    {
+      "name": "HUM2",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:33",
+        "filename": "/var/tmp/dpride/HUM2",
+        "dataUnit": "u",
+        "messagePeriod": 2063
+      }
+    },
+    {
+      "name": "EBO1",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:11",
+        "filename": "/var/tmp/dpride/EBO1",
+        "dataUnit": "u",
+        "messagePeriod": 1879
+      }
+    },
+    {
+      "name": "SVA",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:10",
+        "filename": "/var/tmp/dpride/SVA",
+        "dataUnit": "u",
+        "messagePeriod": 1877
+      }
+    },
+    {
+      "name": "PF",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:01",
+        "filename": "/var/tmp/dpride/PF",
+        "dataUnit": "u",
+        "messagePeriod": 1801
+      }
+    },
+    {
+      "name": "CO1",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:18",
+        "filename": "/var/tmp/dpride/CO1",
+        "dataUnit": "u",
+        "messagePeriod": 1949
+      }
+    },
+    {
+      "name": "RAI1",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:12",
+        "filename": "/var/tmp/dpride/RAI1",
+        "dataUnit": "u",
+        "messagePeriod": 1889
+      }
+    },
+    {
+      "name": "TSN",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:34",
+        "filename": "/var/tmp/dpride/TSN",
+        "dataUnit": "u",
+        "messagePeriod": 2069
+      }
+    },
+    {
+      "name": "CH",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:22",
+        "filename": "/var/tmp/dpride/CH",
+        "dataUnit": "u",
+        "messagePeriod": 1987
+      }
+    },
+    {
+      "name": "RA01",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:15",
+        "filename": "/var/tmp/dpride/RA01",
+        "dataUnit": "u",
+        "messagePeriod": 1913
+      }
+    },
+    {
+      "name": "ES",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:06",
+        "filename": "/var/tmp/dpride/ES",
+        "dataUnit": "u",
+        "messagePeriod": 1861
+      }
+    },
+    {
+      "name": "EBO",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:04",
+        "filename": "/var/tmp/dpride/EBO",
+        "dataUnit": "u",
+        "messagePeriod": 1831
+      }
+    },
+    {
+      "name": "SVC",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/simulated_device/libsimulated_device.so"
+        }
+      },
+      "args": {
+        "macAddress": "00:00:00:00:00:02",
+        "filename": "/var/tmp/dpride/SVC",
+        "dataUnit": "u",
+        "messagePeriod": 1811
+      }
+    },
+    {
+      "name": "Logger",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "./modules/logger/liblogger.so"
+        }
+      },
+      "args": {
+        "filename": "deviceCloudUploadGatewaylog.log"
+      }
+    }
+  ],
+  "links": [
+    {
+      "source": "*",
+      "sink": "Logger"
+    },
+    {
+      "source": "RBI1",
+      "sink": "mapping"
+    },
+    {
+      "source": "CH1",
+      "sink": "mapping"
+    },
+    {
+      "source": "RB01",
+      "sink": "mapping"
+    },
+    {
+      "source": "TMP1",
+      "sink": "mapping"
+    },
+    {
+      "source": "RAI",
+      "sink": "mapping"
+    },
+    {
+      "source": "TMP2",
+      "sink": "mapping"
+    },
+    {
+      "source": "CH2",
+      "sink": "mapping"
+    },
+    {
+      "source": "HUM",
+      "sink": "mapping"
+    },
+    {
+      "source": "BC",
+      "sink": "mapping"
+    },
+    {
+      "source": "TSN1",
+      "sink": "mapping"
+    },
+    {
+      "source": "CO",
+      "sink": "mapping"
+    },
+    {
+      "source": "RA0",
+      "sink": "mapping"
+    },
+    {
+      "source": "TMP3",
+      "sink": "mapping"
+    },
+    {
+      "source": "RBI",
+      "sink": "mapping"
+    },
+    {
+      "source": "TMP4",
+      "sink": "mapping"
+    },
+    {
+      "source": "BC1",
+      "sink": "mapping"
+    },
+    {
+      "source": "RB0",
+      "sink": "mapping"
+    },
+    {
+      "source": "TSN2",
+      "sink": "mapping"
+    },
+    {
+      "source": "DIV",
+      "sink": "mapping"
+    },
+    {
+      "source": "TMP",
+      "sink": "mapping"
+    },
+    {
+      "source": "PIRS",
+      "sink": "mapping"
+    },
+    {
+      "source": "HUM1",
+      "sink": "mapping"
+    },
+    {
+      "source": "HUM2",
+      "sink": "mapping"
+    },
+    {
+      "source": "EBO1",
+      "sink": "mapping"
+    },
+    {
+      "source": "SVA",
+      "sink": "mapping"
+    },
+    {
+      "source": "PF",
+      "sink": "mapping"
+    },
+    {
+      "source": "CO1",
+      "sink": "mapping"
+    },
+    {
+      "source": "RAI1",
+      "sink": "mapping"
+    },
+    {
+      "source": "TSN",
+      "sink": "mapping"
+    },
+    {
+      "source": "CH",
+      "sink": "mapping"
+    },
+    {
+      "source": "RA01",
+      "sink": "mapping"
+    },
+    {
+      "source": "ES",
+      "sink": "mapping"
+    },
+    {
+      "source": "EBO",
+      "sink": "mapping"
+    },
+    {
+      "source": "SVC",
+      "sink": "mapping"
+    },
+    {
+      "source": "mapping",
+      "sink": "IotHub"
+    },
+    {
+      "source": "mapping",
+      "sink": "RBI1"
+    },
+    {
+      "source": "mapping",
+      "sink": "CH1"
+    },
+    {
+      "source": "mapping",
+      "sink": "RB01"
+    },
+    {
+      "source": "mapping",
+      "sink": "TMP1"
+    },
+    {
+      "source": "mapping",
+      "sink": "RAI"
+    },
+    {
+      "source": "mapping",
+      "sink": "TMP2"
+    },
+    {
+      "source": "mapping",
+      "sink": "CH2"
+    },
+    {
+      "source": "mapping",
+      "sink": "HUM"
+    },
+    {
+      "source": "mapping",
+      "sink": "BC"
+    },
+    {
+      "source": "mapping",
+      "sink": "TSN1"
+    },
+    {
+      "source": "mapping",
+      "sink": "CO"
+    },
+    {
+      "source": "mapping",
+      "sink": "RA0"
+    },
+    {
+      "source": "mapping",
+      "sink": "TMP3"
+    },
+    {
+      "source": "mapping",
+      "sink": "RBI"
+    },
+    {
+      "source": "mapping",
+      "sink": "TMP4"
+    },
+    {
+      "source": "mapping",
+      "sink": "BC1"
+    },
+    {
+      "source": "mapping",
+      "sink": "RB0"
+    },
+    {
+      "source": "mapping",
+      "sink": "TSN2"
+    },
+    {
+      "source": "mapping",
+      "sink": "DIV"
+    },
+    {
+      "source": "mapping",
+      "sink": "TMP"
+    },
+    {
+      "source": "mapping",
+      "sink": "PIRS"
+    },
+    {
+      "source": "mapping",
+      "sink": "HUM1"
+    },
+    {
+      "source": "mapping",
+      "sink": "HUM2"
+    },
+    {
+      "source": "mapping",
+      "sink": "EBO1"
+    },
+    {
+      "source": "mapping",
+      "sink": "SVA"
+    },
+    {
+      "source": "mapping",
+      "sink": "PF"
+    },
+    {
+      "source": "mapping",
+      "sink": "CO1"
+    },
+    {
+      "source": "mapping",
+      "sink": "RAI1"
+    },
+    {
+      "source": "mapping",
+      "sink": "TSN"
+    },
+    {
+      "source": "mapping",
+      "sink": "CH"
+    },
+    {
+      "source": "mapping",
+      "sink": "RA01"
+    },
+    {
+      "source": "mapping",
+      "sink": "ES"
+    },
+    {
+      "source": "mapping",
+      "sink": "EBO"
+    },
+    {
+      "source": "mapping",
+      "sink": "SVC"
+    },
+    {
+      "source": "IotHub",
+      "sink": "mapping"
+    }
+  ]
+}
