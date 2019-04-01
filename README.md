@@ -1,8 +1,8 @@
 # iot-edge-hacks
 
-## [de:code 2018 シアターセッション DA61](README_ja.md)
+## [de:code 2019 用 サンプルコード (README.md)
 
-### [どんなデータもAzure IoT Hubに転送！IoTデバイスで汎用的に利用できるサンプルコード紹介 の日本語解説はこちら](README_ja.md)
+### [de:code 2018 のどんなデータもAzure IoT Hubに転送！IoTデバイスで汎用的に利用できるサンプルコード紹介 の日本語解説はこちら](README_ja.md)
 
 ## Azure IoT Edge Tiny Hacks
 
